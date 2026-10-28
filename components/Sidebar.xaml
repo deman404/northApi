@@ -1,0 +1,93 @@
+<UserControl x:Class="northApi.components.Sidebar"
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ Background="#181919" Foreground="#C6C6C6" FontFamily="Segoe UI" FontSize="12" MinWidth="260">
+ <UserControl.Resources><ResourceDictionary><ResourceDictionary.MergedDictionaries><ResourceDictionary Source="/northApi;component/assets/SidebarIcons.xaml"/></ResourceDictionary.MergedDictionaries>
+  <Style TargetType="Button">
+   <Setter Property="Foreground" Value="#B9BCBE"/><Setter Property="Background" Value="Transparent"/>
+   <Setter Property="BorderThickness" Value="0"/><Setter Property="Cursor" Value="Hand"/>
+   <Setter Property="Padding" Value="7"/><Setter Property="HorizontalContentAlignment" Value="Center"/>
+   <Setter Property="Template"><Setter.Value><ControlTemplate TargetType="Button">
+    <Border x:Name="Surface" Background="{TemplateBinding Background}" CornerRadius="3" Padding="{TemplateBinding Padding}"><ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="Center"/></Border>
+    <ControlTemplate.Triggers><Trigger Property="IsMouseOver" Value="True"><Setter TargetName="Surface" Property="Background" Value="#343636"/></Trigger><Trigger Property="IsKeyboardFocused" Value="True"><Setter TargetName="Surface" Property="BorderBrush" Value="#54A8C4"/><Setter TargetName="Surface" Property="BorderThickness" Value="1"/></Trigger></ControlTemplate.Triggers>
+   </ControlTemplate></Setter.Value></Setter>
+  </Style>
+  <Style x:Key="NewRequestButton" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+   <Setter Property="Background" Value="#267F9D"/>
+   <Setter Property="Foreground" Value="White"/>
+   <Setter Property="Template"><Setter.Value><ControlTemplate TargetType="Button">
+    <Border x:Name="RequestSurface" Background="{TemplateBinding Background}" CornerRadius="3" Padding="{TemplateBinding Padding}" BorderThickness="1" BorderBrush="Transparent">
+     <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="Center"/>
+    </Border>
+    <ControlTemplate.Triggers>
+     <Trigger Property="IsMouseOver" Value="True"><Setter TargetName="RequestSurface" Property="Background" Value="#3095B6"/></Trigger>
+     <Trigger Property="IsPressed" Value="True"><Setter TargetName="RequestSurface" Property="Background" Value="#1C647D"/></Trigger>
+     <Trigger Property="IsKeyboardFocused" Value="True"><Setter TargetName="RequestSurface" Property="BorderBrush" Value="#A0DFF2"/></Trigger>
+     <Trigger Property="IsEnabled" Value="False"><Setter TargetName="RequestSurface" Property="Opacity" Value="0.5"/></Trigger>
+    </ControlTemplate.Triggers>
+   </ControlTemplate></Setter.Value></Setter>
+  </Style>
+  <Style x:Key="Icon" TargetType="Image"><Setter Property="Width" Value="15"/><Setter Property="Height" Value="15"/><Setter Property="VerticalAlignment" Value="Center"/><Setter Property="Stretch" Value="Uniform"/></Style>
+  <Style TargetType="RadioButton">
+   <Setter Property="Foreground" Value="#B9BCBE"/><Setter Property="Cursor" Value="Hand"/>
+   <Setter Property="Template"><Setter.Value><ControlTemplate TargetType="RadioButton">
+    <Border x:Name="Tab" Background="Transparent" CornerRadius="3" BorderThickness="1" BorderBrush="Transparent" Padding="0,7"><ContentPresenter HorizontalAlignment="Center"/></Border>
+    <ControlTemplate.Triggers><Trigger Property="IsChecked" Value="True"><Setter TargetName="Tab" Property="Background" Value="#111212"/><Setter TargetName="Tab" Property="BorderBrush" Value="#414343"/></Trigger><Trigger Property="IsMouseOver" Value="True"><Setter Property="Foreground" Value="White"/></Trigger></ControlTemplate.Triggers>
+   </ControlTemplate></Setter.Value></Setter>
+  </Style>
+  <Style TargetType="Expander">
+   <Setter Property="Foreground" Value="#C6C6C6"/><Setter Property="Template"><Setter.Value><ControlTemplate TargetType="Expander">
+    <StackPanel>
+     <ToggleButton x:Name="HeaderButton" IsChecked="{Binding IsExpanded, RelativeSource={RelativeSource TemplatedParent}}" Background="Transparent" BorderThickness="0" Foreground="{TemplateBinding Foreground}" HorizontalContentAlignment="Stretch">
+      <ToggleButton.Template><ControlTemplate TargetType="ToggleButton"><Border x:Name="Row" Background="Transparent" Padding="5,7"><DockPanel><Image x:Name="Chevron" Source="{StaticResource SidebarChevronRight}" Width="12" Height="12" Opacity="0.65" Margin="0,0,11,0" RenderTransformOrigin="0.5,0.5"><Image.RenderTransform><RotateTransform Angle="0"/></Image.RenderTransform></Image><ContentPresenter VerticalAlignment="Center"/></DockPanel></Border><ControlTemplate.Triggers><Trigger Property="IsMouseOver" Value="True"><Setter TargetName="Row" Property="Background" Value="#252727"/></Trigger><Trigger Property="IsChecked" Value="True"><Setter TargetName="Chevron" Property="RenderTransform"><Setter.Value><RotateTransform Angle="90"/></Setter.Value></Setter></Trigger></ControlTemplate.Triggers></ControlTemplate></ToggleButton.Template>
+      <ContentPresenter Content="{TemplateBinding Header}"/>
+     </ToggleButton>
+     <ContentPresenter x:Name="Children" Visibility="Collapsed" Margin="28,0,4,5"/>
+    </StackPanel><ControlTemplate.Triggers><Trigger Property="IsExpanded" Value="True"><Setter TargetName="Children" Property="Visibility" Value="Visible"/></Trigger></ControlTemplate.Triggers>
+   </ControlTemplate></Setter.Value></Setter>
+  </Style>
+ </ResourceDictionary></UserControl.Resources>
+ <Border BorderBrush="#303232" BorderThickness="0,0,1,0" Padding="7,0,9,8">
+  <Grid>
+   <Grid.RowDefinitions><RowDefinition Height="32"/><RowDefinition Height="42"/><RowDefinition Height="40"/><RowDefinition Height="39"/><RowDefinition Height="41"/><RowDefinition Height="*"/></Grid.RowDefinitions>
+   <DockPanel>
+    <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
+     <Button ToolTip="Import collection" Click="Import_Click" AutomationProperties.Name="Import collection"><Image Style="{StaticResource Icon}" Source="{StaticResource SidebarAttach}"/></Button>
+     <Button ToolTip="Export collections" Click="Export_Click" AutomationProperties.Name="Export collections"><Image Style="{StaticResource Icon}" Source="{StaticResource SidebarUpload}"/></Button>
+     <Button ToolTip="Console" Click="Console_Click" AutomationProperties.Name="Console"><Image Style="{StaticResource Icon}" Source="{StaticResource SidebarTerminal}"/></Button>
+     <Button ToolTip="More" Click="More_Click" AutomationProperties.Name="More options"><Image Style="{StaticResource Icon}" Source="{StaticResource SidebarMore}"/></Button>
+    </StackPanel>
+    <TextBlock Text="northApi" VerticalAlignment="Center" Margin="4,0,0,0" Foreground="#E1E1E1"/>
+   </DockPanel>
+   <Grid Grid.Row="1" Margin="0,6,0,2"><Grid.ColumnDefinitions><ColumnDefinition/><ColumnDefinition Width="35"/></Grid.ColumnDefinitions>
+    <ComboBox x:Name="WorkspaceSelector" SelectedIndex="0" Background="#181919" Foreground="#D5D5D5" Padding="8,6" BorderBrush="#696B6B" AutomationProperties.Name="Workspace">
+     <ComboBox.Resources><SolidColorBrush x:Key="{x:Static SystemColors.WindowBrushKey}" Color="#242525"/><SolidColorBrush x:Key="{x:Static SystemColors.WindowTextBrushKey}" Color="#D5D5D5"/></ComboBox.Resources>
+     <ComboBox.Template><ControlTemplate TargetType="ComboBox"><Grid>
+      <ToggleButton Focusable="False" IsChecked="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}">
+       <ToggleButton.Template><ControlTemplate TargetType="ToggleButton"><Border Background="#181919" BorderBrush="#696B6B" BorderThickness="1" CornerRadius="3"><Image Style="{StaticResource Icon}" Source="{StaticResource SidebarChevronDown}" Width="12" Height="12" HorizontalAlignment="Right" Margin="0,0,9,0"/></Border></ControlTemplate></ToggleButton.Template>
+      </ToggleButton>
+      <ContentPresenter Content="{TemplateBinding SelectionBoxItem}" IsHitTestVisible="False" Margin="9,0,28,0" VerticalAlignment="Center"/>
+      <Popup x:Name="PART_Popup" IsOpen="{TemplateBinding IsDropDownOpen}" Placement="Bottom" AllowsTransparency="True" Focusable="False"><Border Background="#242525" BorderBrush="#696B6B" BorderThickness="1" MinWidth="{Binding ActualWidth, RelativeSource={RelativeSource TemplatedParent}}" Padding="3"><ScrollViewer><ItemsPresenter/></ScrollViewer></Border></Popup>
+     </Grid></ControlTemplate></ComboBox.Template>
+     <ComboBoxItem Content="Default workspace"/>
+    </ComboBox>
+    <Button Grid.Column="1" ToolTip="New workspace" Click="Workspace_Click" AutomationProperties.Name="New workspace"><Image Style="{StaticResource Icon}" Source="{StaticResource SidebarUserAdd}"/></Button>
+   </Grid>
+   <Border Grid.Row="2" Background="#267F9D" CornerRadius="3" Margin="0,7,0,1"><Grid><Grid.ColumnDefinitions><ColumnDefinition/><ColumnDefinition Width="34"/></Grid.ColumnDefinitions>
+    <Button Style="{StaticResource NewRequestButton}" Content="New HTTP Request" FontWeight="SemiBold" Click="NewRequest_Click"/>
+    <Button Grid.Column="1" Style="{StaticResource NewRequestButton}" Padding="0" Click="RequestMenu_Click" ToolTip="Request options" AutomationProperties.Name="Request options"><Image Style="{StaticResource Icon}" Source="{StaticResource SidebarChevronDown}" Width="12" Height="12"/></Button>
+    <Border Grid.Column="1" BorderBrush="#66FFFFFF" BorderThickness="1,0,0,0" Margin="0,6" IsHitTestVisible="False"/>
+   </Grid></Border>
+   <UniformGrid Grid.Row="3" Columns="3" Background="#292B2B" Margin="0,7,0,0">
+    <RadioButton x:Name="CollectionsTab" GroupName="SidebarTabs" IsChecked="True" Checked="Tab_Checked" ToolTip="Collections" AutomationProperties.Name="Collections"><Image Style="{StaticResource Icon}" Source="{StaticResource SidebarCollections}"/></RadioButton>
+    <RadioButton GroupName="SidebarTabs" Checked="Tab_Checked" Tag="Environments" ToolTip="Environments" AutomationProperties.Name="Environments"><Image Style="{StaticResource Icon}" Source="{StaticResource SidebarEnvironments}"/></RadioButton>
+    <RadioButton GroupName="SidebarTabs" Checked="Tab_Checked" Tag="History" ToolTip="History" AutomationProperties.Name="History"><Image Style="{StaticResource Icon}" Source="{StaticResource SidebarHistory}"/></RadioButton>
+   </UniformGrid>
+   <Grid Grid.Row="4" Margin="0,8,0,0"><Grid.ColumnDefinitions><ColumnDefinition Width="30"/><ColumnDefinition/></Grid.ColumnDefinitions>
+    <Button Padding="0" Click="AddCollection_Click" ToolTip="Add collection" AutomationProperties.Name="Add collection"><Image Style="{StaticResource Icon}" Source="{StaticResource SidebarPlus}" Width="14" Height="14"/></Button>
+    <Border Grid.Column="1" BorderBrush="#606363" BorderThickness="1" CornerRadius="3" Background="#111212"><DockPanel Margin="10,0,7,0"><Image Style="{StaticResource Icon}" Source="{StaticResource SidebarFilter}" Width="13" Height="13" Opacity="0.65" Margin="0,0,9,0"/><Grid><TextBlock Text="Filter" Foreground="#737778" VerticalAlignment="Center" IsHitTestVisible="False"><TextBlock.Style><Style TargetType="TextBlock"><Style.Triggers><DataTrigger Binding="{Binding Text, ElementName=FilterBox}" Value=""><Setter Property="Visibility" Value="Visible"/></DataTrigger></Style.Triggers><Setter Property="Visibility" Value="Collapsed"/></Style></TextBlock.Style></TextBlock><TextBox x:Name="FilterBox" TextChanged="Filter_Changed" VerticalContentAlignment="Center" Background="Transparent" Foreground="#D7D7D7" BorderThickness="0" CaretBrush="White" AutomationProperties.Name="Filter collections"/></Grid></DockPanel></Border>
+   </Grid>
+   <ScrollViewer Grid.Row="5" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Margin="0,9,0,0"><StackPanel><StackPanel x:Name="CollectionList"/><TextBlock x:Name="EmptyMessage" Visibility="Collapsed" Foreground="#777B7D" TextWrapping="Wrap" Margin="12,12"/></StackPanel></ScrollViewer>
+  </Grid>
+ </Border>
+</UserControl>

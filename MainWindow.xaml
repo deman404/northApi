@@ -1,0 +1,49 @@
+<Window x:Class="northApi.MainWindow"
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ Title="northApi" Icon="assets/app.ico" Width="640" Height="440" WindowStartupLocation="CenterScreen"
+ WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True" Background="Transparent" Foreground="#F5F5F5"
+ FontFamily="Segoe UI" MouseLeftButtonDown="Window_MouseLeftButtonDown" KeyDown="Window_KeyDown">
+ <Window.Resources>
+  <ResourceDictionary>
+   <ResourceDictionary.MergedDictionaries><ResourceDictionary Source="assets/Icons.xaml" /></ResourceDictionary.MergedDictionaries>
+   <Style x:Key="WindowButton" TargetType="Button">
+    <Setter Property="Width" Value="36"/><Setter Property="Height" Value="30"/>
+    <Setter Property="Background" Value="Transparent"/><Setter Property="Foreground" Value="#999999"/>
+    <Setter Property="BorderThickness" Value="0"/><Setter Property="Cursor" Value="Hand"/>
+    <Setter Property="Template"><Setter.Value><ControlTemplate TargetType="Button">
+     <Border x:Name="Surface" Background="{TemplateBinding Background}" CornerRadius="4"><ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/></Border>
+     <ControlTemplate.Triggers>
+      <Trigger Property="IsMouseOver" Value="True"><Setter TargetName="Surface" Property="Background" Value="#383838"/><Setter Property="Foreground" Value="White"/></Trigger>
+      <Trigger Property="IsKeyboardFocused" Value="True"><Setter TargetName="Surface" Property="Background" Value="#383838"/></Trigger>
+     </ControlTemplate.Triggers>
+    </ControlTemplate></Setter.Value></Setter>
+   </Style>
+  </ResourceDictionary>
+ </Window.Resources>
+ <Border BorderBrush="#373737" BorderThickness="1" CornerRadius="16" Background="#202020">
+  <Grid>
+   <Grid.RowDefinitions><RowDefinition Height="44"/><RowDefinition Height="*"/><RowDefinition Height="54"/></Grid.RowDefinitions>
+   <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,5,7,0">
+    <Button Style="{StaticResource WindowButton}" Click="Minimize_Click" ToolTip="Minimize" AutomationProperties.Name="Minimize"><Path Data="M0,0 L10,0" Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" StrokeThickness="1"/></Button>
+    <Button Style="{StaticResource WindowButton}" Click="Close_Click" ToolTip="Close" AutomationProperties.Name="Close"><Path Data="M0,0 L9,9 M9,0 L0,9" Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" StrokeThickness="1"/></Button>
+   </StackPanel>
+   <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,7">
+    <Border Width="80" Height="80" CornerRadius="40" Background="#FF6C37" HorizontalAlignment="Center"><Viewbox Width="45" Height="45"><Path Data="{StaticResource CompassIcon}" Fill="White"/></Viewbox></Border>
+    <TextBlock Text="northApi" FontSize="34" FontWeight="SemiBold" HorizontalAlignment="Center" Margin="0,18,0,0"/>
+    <TextBlock Text="Great APIs start here." FontSize="13" Foreground="#999999" HorizontalAlignment="Center" Margin="0,6,0,0"/>
+    <Grid Width="160" Height="2" Margin="0,33,0,0" ClipToBounds="True" Background="#393939" AutomationProperties.Name="Loading">
+     <Rectangle Width="56" Fill="#FF6C37" HorizontalAlignment="Left">
+      <Rectangle.RenderTransform><TranslateTransform x:Name="LoadingTranslation" X="-56"/></Rectangle.RenderTransform>
+      <Rectangle.Triggers><EventTrigger RoutedEvent="Loaded"><BeginStoryboard><Storyboard RepeatBehavior="Forever"><DoubleAnimation Storyboard.TargetName="LoadingTranslation" Storyboard.TargetProperty="X" From="-56" To="160" Duration="0:0:1.6"/></Storyboard></BeginStoryboard></EventTrigger></Rectangle.Triggers>
+     </Rectangle>
+    </Grid>
+    <TextBlock Text="Starting your workspace…" FontSize="11" Foreground="#858585" HorizontalAlignment="Center" Margin="0,13,0,0"/>
+   </StackPanel>
+   <Grid Grid.Row="2" Margin="25,0,25,0">
+    <TextBlock Text="YOUR NEXT REQUEST STARTS HERE" FontSize="9" Foreground="#666666" VerticalAlignment="Center"/>
+    <TextBlock x:Name="VersionLabel" FontSize="10" Foreground="#777777" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+   </Grid>
+  </Grid>
+ </Border>
+</Window>

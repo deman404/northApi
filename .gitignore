@@ -1,0 +1,37 @@
+﻿# Build and generated artifacts
+**/bin/
+**/obj/
+/artifacts/
+**/TestResults/
+*.trx
+*.log
+*.binlog
+
+# IDE and machine-local settings
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.DS_Store
+Thumbs.db
+
+# Credentials, signing material, and local workspace data
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.pem
+*.key
+**/workspace.json
+**/workspace.json.*
+*.tmp
+*.bak
+*.backup-*
+
+# Packaged builds
+*.nupkg
+*.snupkg

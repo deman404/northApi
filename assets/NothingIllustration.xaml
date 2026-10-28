@@ -1,0 +1,120 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<!-- Native WPF rendering of nothing.svg; CSS stroke fallback is #686868. -->
+<DrawingImage x:Key="NothingIllustration"><DrawingImage.Drawing><DrawingGroup><GeometryDrawing Brush="Transparent"><GeometryDrawing.Geometry><RectangleGeometry Rect="0,0,140,120"/></GeometryDrawing.Geometry></GeometryDrawing>
+<DrawingGroup Opacity="1" ClipGeometry="M17,4 H122.7 V116.3 H17 Z">
+<DrawingGroup Opacity="0.3"><GeometryDrawing Geometry="F1 M76.1 20.8001L77.4 24.1001L80.6 24.9001L82 28.2001L81.9 29.3001L78.5 31.9001V34.6001C78.5 34.6001 81.3 32.8001 84.7 33.5001C88.1 34.1001 96.4 37.6001 96.4 37.6001C96.4 37.6001 97.2 27.3001 92 20.9001C85.1 12.5001 76.1 20.8001 76.1 20.8001Z"
+ Brush="#262626"
+>
+</GeometryDrawing></DrawingGroup>
+<DrawingGroup Opacity="0.3"><GeometryDrawing Geometry="F1 M52.4 65.1001H54.4C54.4 65.1001 75.5 85.2001 85.6 87.7001C85.6 87.7001 78 109.6 62.3 115.7C62.3 115.7 51.6 118.9 49.2 100.4C49.2 100.3 46.5 88.7001 52.4 65.1001Z"
+ Brush="#262626"
+>
+</GeometryDrawing></DrawingGroup>
+<DrawingGroup Opacity="1"><GeometryDrawing Geometry="F1 M89.1 80.5999C80.7 102.2 67.2 118.3 58 115.6C48.1 112.7 45.7 90.8 52.2 65.7"
+>
+<GeometryDrawing.Pen><Pen Brush="#686868" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round"/></GeometryDrawing.Pen>
+</GeometryDrawing></DrawingGroup>
+<DrawingGroup Opacity="1"><GeometryDrawing Geometry="F1 M76.3 20.6C80.1 17.6 83.9 16.4 87.2 17.4C94.2 19.5 97.4 30.8 96.5 46.1L96.4 46.8"
+>
+<GeometryDrawing.Pen><Pen Brush="#686868" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round"/></GeometryDrawing.Pen>
+</GeometryDrawing></DrawingGroup>
+<DrawingGroup Opacity="1"><GeometryDrawing Geometry="F1 M54.6 9.80005L55.2 12.2"
+>
+<GeometryDrawing.Pen><Pen Brush="#686868" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round"/></GeometryDrawing.Pen>
+</GeometryDrawing></DrawingGroup>
+<DrawingGroup Opacity="0.7">
+<DrawingGroup Opacity="0.7"><GeometryDrawing Geometry="F1 M53.8 9.9C55.2911 9.9 56.5 8.69117 56.5 7.2C56.5 5.70883 55.2911 4.5 53.8 4.5C52.3088 4.5 51.1 5.70883 51.1 7.2C51.1 8.69117 52.3088 9.9 53.8 9.9Z"
+ Brush="white"
+>
+</GeometryDrawing></DrawingGroup>
+</DrawingGroup>
+<DrawingGroup Opacity="1"><GeometryDrawing Geometry="F1 M53.8 9.9C55.2911 9.9 56.5 8.69117 56.5 7.2C56.5 5.70883 55.2911 4.5 53.8 4.5C52.3088 4.5 51.1 5.70883 51.1 7.2C51.1 8.69117 52.3088 9.9 53.8 9.9Z"
+>
+<GeometryDrawing.Pen><Pen Brush="#686868" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round"/></GeometryDrawing.Pen>
+</GeometryDrawing></DrawingGroup>
+<DrawingGroup Opacity="1"><GeometryDrawing Geometry="F1 M52.5 49.8001C45.1 48.8001 38.8 44.9001 35.7 37.8001L35.1 36.6001C33.4 32.8001 29 31.2001 25.2 32.9001C21.4 34.6001 19.8 39.0001 21.6 42.8001L22.1 44.0001C27.6 56.2001 38.8 63.7001 51.5 65.1001C52.7 65.2001 53.7 65.3001 54.9 65.3001"
+>
+<GeometryDrawing.Pen><Pen Brush="#686868" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round"/></GeometryDrawing.Pen>
+</GeometryDrawing></DrawingGroup>
+<DrawingGroup Opacity="1"><GeometryDrawing Geometry="F1 M59.2 50.2001C69.8039 50.2001 78.4 41.6039 78.4 31C78.4 20.3962 69.8039 11.8 59.2 11.8C48.5961 11.8 40 20.3962 40 31C40 41.6039 48.5961 50.2001 59.2 50.2001Z"
+>
+<GeometryDrawing.Pen><Pen Brush="#686868" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round"/></GeometryDrawing.Pen>
+</GeometryDrawing></DrawingGroup>
+<DrawingGroup Opacity="1"><GeometryDrawing Geometry="F1 M54.6 9.80005L55.2 12.2"
+>
+<GeometryDrawing.Pen><Pen Brush="#686868" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round"/></GeometryDrawing.Pen>
+</GeometryDrawing></DrawingGroup>
+<DrawingGroup Opacity="1"><GeometryDrawing Geometry="F1 M53.8 9.9C55.2911 9.9 56.5 8.69117 56.5 7.2C56.5 5.70883 55.2911 4.5 53.8 4.5C52.3088 4.5 51.1 5.70883 51.1 7.2C51.1 8.69117 52.3088 9.9 53.8 9.9Z"
+ Brush="#FF8853"
+>
+</GeometryDrawing></DrawingGroup>
+<DrawingGroup Opacity="1"><GeometryDrawing Geometry="F1 M53.8 9.9C55.2911 9.9 56.5 8.69117 56.5 7.2C56.5 5.70883 55.2911 4.5 53.8 4.5C52.3088 4.5 51.1 5.70883 51.1 7.2C51.1 8.69117 52.3088 9.9 53.8 9.9Z"
+>
+<GeometryDrawing.Pen><Pen Brush="#686868" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round"/></GeometryDrawing.Pen>
+</GeometryDrawing></DrawingGroup>
+<DrawingGroup Opacity="1"><GeometryDrawing Geometry="F1 M43.7 34.3C45.2 40.1 53.3 44.9 61.3 42.9C69.3 40.9 74.2 32.9 72.8 27.1C71.4 21.3 69.8 16.6 55.6 20.1C42.1 23.4 42.3 28.4 43.7 34.3Z"
+>
+<GeometryDrawing.Pen><Pen Brush="#686868" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round"/></GeometryDrawing.Pen>
+</GeometryDrawing></DrawingGroup>
+<DrawingGroup Opacity="1"><GeometryDrawing Geometry="F1 M40 31.8L37.6 33.5C37.2 33.9 37 34.5 37.2 35L37.9 37.6C38.1 38.2 38.6 38.6001 39.2 38.7001H41.5"
+>
+<GeometryDrawing.Pen><Pen Brush="#686868" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round"/></GeometryDrawing.Pen>
+</GeometryDrawing></DrawingGroup>
+<DrawingGroup Opacity="1"><GeometryDrawing Geometry="F1 M77.1 24.1001L80.1 24.6001C80.7 24.7001 81.1 25.1001 81.2 25.7001L81.9 28.3001C82.1 28.9001 81.9 29.5001 81.3 29.9001L78.3 32.2001"
+>
+<GeometryDrawing.Pen><Pen Brush="#686868" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round"/></GeometryDrawing.Pen>
+</GeometryDrawing></DrawingGroup>
+<DrawingGroup Opacity="1"><GeometryDrawing Geometry="F1 M96.2 43.9C90.2 41.4 83.7 40.5 77.3 41C76.7 41 76.2 41.1 75.6 41.1"
+>
+<GeometryDrawing.Pen><Pen Brush="#686868" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round"/></GeometryDrawing.Pen>
+</GeometryDrawing></DrawingGroup>
+<DrawingGroup Opacity="1"><GeometryDrawing Geometry="F1 M53.8 64.5C54.3 65.1 69.6 81.1 85.6 87.7"
+>
+<GeometryDrawing.Pen><Pen Brush="#686868" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round"/></GeometryDrawing.Pen>
+</GeometryDrawing></DrawingGroup>
+<DrawingGroup Opacity="1"><GeometryDrawing Geometry="F1 M53.8 64.4999C52.9 63.6999 49 56.2999 53.2 49.3999"
+>
+<GeometryDrawing.Pen><Pen Brush="#686868" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round"/></GeometryDrawing.Pen>
+</GeometryDrawing></DrawingGroup>
+<DrawingGroup Opacity="1"><GeometryDrawing Geometry="F1 M55.1 65.8001C52.6 59.8001 55.3 53.1001 56.5 50.1001"
+>
+<GeometryDrawing.Pen><Pen Brush="#686868" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round"/></GeometryDrawing.Pen>
+</GeometryDrawing></DrawingGroup>
+<DrawingGroup Opacity="1"><GeometryDrawing Geometry="F1 M87.7 58.8C78.7 60 73.4 48.7 73.5 44"
+>
+<GeometryDrawing.Pen><Pen Brush="#686868" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round"/></GeometryDrawing.Pen>
+</GeometryDrawing></DrawingGroup>
+<DrawingGroup Opacity="1"><GeometryDrawing Geometry="F1 M87.7 58.8001C78.3 53.6001 76.8 44.3001 77.3 41.1001"
+>
+<GeometryDrawing.Pen><Pen Brush="#686868" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round"/></GeometryDrawing.Pen>
+</GeometryDrawing></DrawingGroup>
+<DrawingGroup Opacity="1"><GeometryDrawing Geometry="F1 M73.3 58.3999C74.5 59.8999 76 61.1999 77.6 62.1999L80.6 60.0999C79 59.0999 77.5 57.7999 76.2 56.3999L73.3 58.3999Z"
+>
+<GeometryDrawing.Pen><Pen Brush="#686868" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round"/></GeometryDrawing.Pen>
+</GeometryDrawing></DrawingGroup>
+<DrawingGroup Opacity="1"><GeometryDrawing Geometry="F1 M78.1 34.8C80.9 33.2 84.3 32.9 87.3 34.1L96.4 37.5"
+>
+<GeometryDrawing.Pen><Pen Brush="#686868" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round"/></GeometryDrawing.Pen>
+</GeometryDrawing></DrawingGroup>
+<DrawingGroup Opacity="1"><GeometryDrawing Geometry="F1 M87.7 58.7999L91.8 61.6999L84 67.2999C80.7 69.5999 79.8 74.0999 82.1 77.3999C83.5 79.3999 85.7 80.5999 88.1 80.5999C89.6 80.5999 91 80.1999 92.2 79.2999L100.6 73.3999C107 68.9999 108.6 60.2999 104.2 53.8999C103.4 52.6999 102.3 51.5999 101.1 50.6999L92.1 43.8999"
+>
+<GeometryDrawing.Pen><Pen Brush="#686868" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round"/></GeometryDrawing.Pen>
+</GeometryDrawing></DrawingGroup>
+<DrawingGroup Opacity="1"><GeometryDrawing Geometry="F1 M36.2 82.8L38.8 83.6L36.2 84.4L35.4 87L34.6 84.4L32 83.6L34.6 82.8L35.4 80.2L36.2 82.8Z"
+>
+<GeometryDrawing.Pen><Pen Brush="#686868" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round"/></GeometryDrawing.Pen>
+</GeometryDrawing></DrawingGroup>
+<DrawingGroup Opacity="1"><GeometryDrawing Geometry="F1 M115.5 43.5999C117.82 43.5999 119.7 41.7195 119.7 39.4C119.7 37.0804 117.82 35.2 115.5 35.2C113.18 35.2 111.3 37.0804 111.3 39.4C111.3 41.7195 113.18 43.5999 115.5 43.5999Z"
+>
+<GeometryDrawing.Pen><Pen Brush="#686868" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round"/></GeometryDrawing.Pen>
+</GeometryDrawing></DrawingGroup>
+<DrawingGroup Opacity="1"><GeometryDrawing Geometry="F1 M119.6 40.4C121.3 41.4 122.3 42.3 122.1 42.7C121.8 43.4 118.5 42.5 114.8 40.9C111.1 39.3 108.3 37.3 108.6 36.7C108.8 36.3 110 36.5 112 37.1"
+>
+<GeometryDrawing.Pen><Pen Brush="#686868" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round"/></GeometryDrawing.Pen>
+</GeometryDrawing></DrawingGroup>
+<DrawingGroup Opacity="1"><GeometryDrawing Geometry="F1 M76.5 7.80005L78.5 8.70005L76.5 9.50005L75.6 11.4L74.8 9.40005L72.8 8.60005L74.8 7.80005L75.7 5.80005L76.5 7.80005Z"
+ Brush="#686868"
+>
+</GeometryDrawing></DrawingGroup>
+</DrawingGroup>
+</DrawingGroup></DrawingImage.Drawing></DrawingImage></ResourceDictionary>
